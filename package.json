@@ -4,16 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url ."
+    "clear": "rimraf dist",
+    "dev": "npm run clear && parcel src/index.html",
+    "build": "npm run clear && parcel build src/index.html --public-url . --no-source-maps --no-minify"
   },
- 
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "fslightbox": "^3.2.2",
     "parcel-bundler": "^1.12.4",
+    "rimraf": "^3.0.2",
     "sass": "^1.27.0"
   },
   "dependencies": {}
