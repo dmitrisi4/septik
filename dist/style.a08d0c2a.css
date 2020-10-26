@@ -205,7 +205,7 @@ html, body {
 }
 
 .header {
-  background-image: url("/screenbg.6d3e6189.png");
+  background-image: url("screenbg.6d3e6189.png");
   background-size: cover;
   padding-top: 25px;
 }
@@ -787,7 +787,7 @@ html, body {
   height: 43px;
   border: 1px solid #000000;
   border-radius: 50%;
-  background-image: url("/arrow.23d0505e.svg");
+  background-image: url("arrow.23d0505e.svg");
   background-repeat: no-repeat;
   background-position: 50%;
 }
@@ -1070,7 +1070,7 @@ html, body {
   box-shadow: 40px 40px 40px 0px rgba(0, 0, 0, 0.5);
   background-color: #C4C4C4;
   background-size: cover;
-  background-image: url("/sert-bg.024b0171.jpg");
+  background-image: url("sert-bg.024b0171.jpg");
 }
 .swiper-box .swiper-slide {
   width: 450px;
@@ -1384,7 +1384,7 @@ html, body {
 .contacts {
   padding-top: 70px;
   padding-bottom: 165px;
-  background-image: url("/mapbg.98571816.jpg");
+  background-image: url("mapbg.98571816.jpg");
   background-size: cover;
 }
 .contacts__title {
@@ -1418,7 +1418,7 @@ html, body {
   transform: translateY(-50%);
   width: 14px;
   height: 17px;
-  background-image: url("/marker.c3588750.svg");
+  background-image: url("marker.c3588750.svg");
 }
 .card-contact__item {
   font-size: 14px;
@@ -1574,4 +1574,4 @@ html, body {
   transform: rotate(270deg);
 }
 
-/*# sourceMappingURL=/style.a08d0c2a.css.map */
+/*# sourceMappingURL=style.a08d0c2a.css.map */
