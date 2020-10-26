@@ -1,0 +1,1073 @@
+html
+	scroll-behavior: smooth
+body
+	font-family: 'Montserrat', sans-serif
+	font-weight: normal
+	margin: 0
+	color: #000
+html,	body
+	height: 100%
+*
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+
+.container
+	max-width: 1280px
+	width: 100%
+	margin: 0 auto
+	padding: 0 15px
+
+.wrapper
+	display: flex
+	flex-direction: column
+	min-height: 100%
+	overflow: hidden
+.main-page
+	flex: 1 0 auto
+.footer
+	flex: 0 0 auto
+
+.slider-button-prev,
+.slider-button-next
+	position: absolute
+	top: 50%
+	z-index: 10
+	transform: translateY(-50%)
+	color: #009DFF
+	width: 52px
+	height: 52px
+	border: 1px solid
+	border-radius: 50%
+	transition: opacity 0.5s
+	opacity: 0.5
+	cursor: pointer
+	display: flex
+	align-items: center
+	justify-content: center
+	&:hover
+		opacity: 1
+	
+.logo
+	max-width: 310px
+	width: 100%
+	display: flex
+	align-items: center
+	svg
+		@media screen and ( max-width: 1023px )
+			width: 50px
+			height: 50px
+			
+	@media screen and ( max-width: 1023px )
+		max-width: 200px
+	&__wrapper
+		margin-left: 15px
+	&__title
+		font-size: 30px
+		font-weight: 900
+		color: #005387
+		margin: 0
+		letter-spacing: 0.11em
+		@media screen and ( max-width: 1200px )
+			font-size: 24px
+		@media screen and ( max-width: 1023px )
+			font-size: 18px
+		@media screen and ( max-width: 530px )
+			font-size: 14px
+			letter-spacing: 0.165em
+		&_green
+			color: #05CD99
+	&__subtitle
+		font-size: 12px
+		margin: 0
+		color: #190A3E
+		font-weight: normal
+		@media screen and ( max-width: 1023px )
+			font-size: 8px
+		@media screen and ( max-width: 530px )
+			font-size: 6px
+
+/** btns **/
+.btn
+	width: 100%
+	height: 70px
+	display: flex
+	font-size: 14px
+	border-radius: 55px
+	border: 0
+	align-items: center
+	justify-content: center
+	max-width: 240px
+	text-decoration: none
+	color: #000
+	font-family: "Montserrat", sans-serif
+	transition: all .2s
+	@media screen and ( max-width: 1023px )
+		max-width: 200px
+		height: 50px
+	&:hover
+		cursor: pointer
+	&_type-1
+		max-width: 175px
+		height: 30px
+		font-size: 12px
+		border: 1px solid #000
+	&_type-main
+		box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25)
+		background: linear-gradient(180deg, #24FAED 0%, #00C58A 100%)
+		&:hover
+			background: linear-gradient(180deg, #24FAED 0%, #22F6E6 22.92%, #00F0A8 100%)
+			transition: all .2s
+			filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5))
+
+	&_drop-shadow
+	&_white
+		border: 1px solid #009DFF
+		background-color: #fff
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+		&:hover
+			transition: all .2s
+			filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5))
+/** end btns/ **/
+
+// input
+.input-theme
+	width: 100%
+	border: 0
+	border-bottom: 1px solid #897979
+	background: transparent
+	padding-top: 40px
+	padding-bottom: 5px
+	opacity: 0.5
+	font-family: "Montserrat", sans-serif
+	&::placeholder
+		color: #0d0c0a
+		font-weight: 300
+	&:hover, &:focus
+		outline: none
+	&:focus
+		opacity: 1
+		&::placeholder
+			font-size: 0
+			opacity: 0
+			transition: all .3s
+// end input
+
+.header
+	background-image: url('./image/screenbg.png')
+	background-size: cover
+	padding-top: 25px
+	@media screen and ( max-width: 530px )
+		padding-top: 15px
+	.nav__links
+		@media screen and ( max-width: 530px )
+			height: auto
+			align-items: normal
+	&__nav
+		display: flex
+		justify-content: space-between
+		@media screen and ( max-width: 1300px )
+			padding: 0 15px
+	&__title-screen
+		padding-top: 70px
+	.logo
+		@media screen and ( max-width: 530px )
+			align-items: normal
+		svg
+			@media screen and ( max-width: 530px )
+				width: 30px
+				height: 30px
+
+.title-screen
+	display: flex
+	flex-direction: column
+	align-items: center
+	&__btn
+		margin-top: 45px
+	&__advantages-list
+		padding-top: 190px
+		@media screen and ( max-width: 1024px )
+			padding-top: 80px
+.titles-main
+	display: flex
+	flex-direction: column
+	@media screen and ( max-width: 530px )
+		text-align: center
+	&__title
+		font-size: 30px
+		color: #000
+		@media screen and ( max-width: 1024px )
+			font-size: 24px
+		@media screen and ( max-width: 1023px )
+			font-size: 18px
+		@media screen and ( max-width: 530px )
+			font-size: 14px
+		&_pos-right
+			align-self: flex-end
+			@media screen and ( max-width:  530px)
+				align-self: auto
+		&_large
+			font-size: 250px
+			background: linear-gradient(#00070D 3.6%, #009DFF 52%, #FFF 96%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			color: #0B2349
+			@media screen and ( max-width:  1300px)
+				font-size: 160px
+			@media screen and ( max-width: 1024px )
+				font-size: 130px
+			@media screen and ( max-width: 1023px )
+				font-size: 93px
+			@media screen and ( max-width: 520px )
+				font-size: 55px
+		&_margin-left
+			margin-left: 200px
+			@media screen and ( max-width: 520px )
+				margin-left: 0
+				font-weight: 700
+				font-size: 18px
+				text-align: center
+
+.nav
+	@media screen and ( max-width: 1023px )
+		padding: 0 10px
+	&__wrap-right
+		display: flex
+		justify-content: flex-end
+		width: 100%
+		@media screen and ( max-width: 1023px )
+			justify-content: space-between
+		@media screen and ( max-width: 520px )
+			justify-content: flex-end
+	&__links
+		height: 30px
+		display: flex
+		align-items: center
+		
+	&__link
+		font-size: 12px
+		color: #000
+		font-weight: normal
+		text-decoration: none
+		margin-left: 60px
+		white-space: nowrap
+		@media screen and ( max-width: 1023px )
+			margin-left: 30px
+		&_hide
+			@media screen and ( max-width: 520px )
+				display: none
+		@media screen and ( max-width: 520px )
+			margin-left: 20px
+				
+			
+	&__btn
+		margin-left: 50px
+		white-space: nowrap
+		@media screen and ( max-width: 1023px )
+			font-size: 8px
+			margin-left: 20px
+			max-width: 120px
+		@media screen and ( max-width: 680px )
+			display: none
+.advantages-list
+	padding-left: 0
+	margin: 0
+	list-style: none
+	display: flex
+	justify-content: center
+	@media screen and ( max-width: 1023px )
+		padding: 80px 10px 0
+	&__list-item
+		@media screen and ( max-width: 1024px )
+			text-align: center
+		@media screen and ( max-width: 767px )
+			flex: 33%
+		&:not(:first-child)
+			margin-left: 90px
+			@media screen and ( max-width: 767px )
+				margin-left: 20px
+	&__text
+		font-size: 20px
+		font-weight: bold
+		max-width: 210px
+		margin-top: 30px
+		@media screen and ( max-width: 1024px )
+			font-size: 16px
+		@media screen and ( max-width: 767px )
+			font-size: 12px
+			font-weight: 400
+
+
+// main
+.page-title
+	font-size: 38px
+	font-weight: 900
+	color: #005387
+	margin: 0
+	text-align: center
+	@media screen and ( max-width: 1200px )
+		font-size: 34px
+	@media screen and ( max-width: 767px )
+		font-size: 26px
+.page-subtitle
+	font-size: 18px
+	margin: 0
+	@media screen and ( max-width: 1200px )
+		font-size: 16px
+	@media screen and ( max-width: 530px )
+		font-size: 12px
+// services
+.services
+	padding-top: 110px
+	@media screen and ( max-width: 530px )
+		padding-top: 50px
+	&__wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__subtitle
+		display: block
+		margin-top: 25px
+		max-width: 550px
+		line-height: 22px
+		text-align: center
+		br
+			@media screen and ( max-width: 767px )
+				display: none
+	&__list-service
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: space-between
+		padding-top: 95px
+		@media screen and ( max-width: 530px )
+			padding-top: 60px
+		@media screen and ( max-width: 767px )
+			flex-direction: column
+			align-items: center
+			justify-content: auto
+	&__btn
+		margin-top: 145px
+		@media screen and ( max-width: 768px )
+			margin-top: 70px
+
+.list-service
+	width: 100%
+.service-item
+	border-radius: 26px
+	position: relative
+	padding-left: 25px
+	padding-top: 20px
+	padding-bottom: 285px
+	width: 100%
+	@media screen and ( max-width: 1200px )
+		padding-bottom: 220px
+	@media screen and ( max-width: 767px )
+		padding-bottom: 110px
+	&__line
+		margin: 0
+		position: relative
+		display: inline-block
+	&__image
+		position: absolute
+		border-radius: 26px
+		display: block
+		@media screen and ( max-width: 1200px )
+			width: 80%
+	&__number
+		font-size: 150px
+		font-weight: 900
+		color: rgba(255, 255, 255, 0.5)
+		@media screen and ( max-width: 1200px )
+			font-size: 120px
+		@media screen and ( max-width: 767px )
+			font-size: 100px
+	&__title
+		font-size: 36px
+		position: absolute
+		top: 50%
+		left: 85%
+		transform: translateY(-50%)
+		color: #000
+		@media screen and ( max-width: 1200px )
+			font-size: 26px
+		@media screen and ( max-width: 767px )
+			font-size: 20px
+	&_type-1
+		width: 100%
+		background: linear-gradient(252.37deg, #3152C9 20.25%, #009DFF 58.29%, #6DC5FC 88.26%), rgba(205, 12, 17, 0.99)
+		margin-bottom: 30px
+		.service-item__image
+			right: 0
+			bottom: 0
+			@media screen and ( max-width: 1200px )
+				width: 60%
+	&_type-2
+		width: 60%
+		background: linear-gradient(144.61deg, #8AFF80 6.82%, #175A00 80.73%), #E78A00
+		@media screen and ( max-width: 1200px )
+			// max-width: 510px
+		@media screen and ( max-width: 1023px )
+			// max-width: 460px	
+		.service-item__image
+			@media screen and ( max-width: 767px )
+				max-width: 500px
+				bottom: 0
+				right: 0
+			
+	&_type-3
+		width: 35%
+		margin-left: 30px
+		background: linear-gradient(162.11deg, #2763D7 17.44%, #6AE5FE 66.53%)
+		.service-item__image
+			@media screen and ( max-width: 767px )
+				max-width: 230px
+				bottom: -25%
+				right: 0
+	@media screen and ( max-width: 767px )
+		width: 100%
+		max-width: 100%
+		margin: 0
+	&:not(:first-child)
+		@media screen and ( max-width: 767px )
+			margin-top: 20px
+	
+
+		
+// end services
+// price
+.price
+	padding-top: 120px
+	padding-bottom: 180px
+	@media screen and ( max-width: 768px )
+		padding-bottom: 100px
+	&__wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__content-title
+		font-size: 24px
+		font-weight: 700
+		text-align: center
+		margin-top: 0
+		margin-bottom: 40px
+		@media screen and ( max-width: 767px )
+			font-size: 20px
+			font-weight: 400
+	&__accordion
+		padding-top: 60px
+		@media screen and ( max-width: 767px )
+			padding-top: 30px
+	&__info
+		padding-top: 40px
+	&__price-footer
+		display: flex
+		justify-content: center
+		width: 100%
+		padding-top: 70px
+	&__btn
+		margin: 0 20px
+		&_hide
+			@media screen and ( max-width: 424px )
+				display: none
+
+.price
+	.accordionItemHeading__col,
+	.accordionItemContent__text
+		flex: 33%
+		&:not(:first-child)
+			margin-left: 10px
+	.accordionItemHeading__col
+		@media screen and ( max-width: 768px )
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+	.accordionItemContent__text
+		&:not(:first-child)
+			@media screen and ( max-width: 768px )
+				text-align: center
+
+
+.price-info
+	max-width: 680px
+	&__title
+		font-size: 18px
+		@media screen and ( max-width: 768px )
+			font-size: 16px
+		@media screen and ( max-width: 767px )
+			font-size: 14px
+	&__text
+		margin: 20px 0 0
+		font-size: 14px
+		line-height: 16px
+		@media screen and ( max-width: 767px )
+			font-size: 12px
+// accordion
+.accordionWrapper
+	width: 100%
+	background:#fff
+.accordionItem
+	display: block
+	width: 100%
+	box-sizing: border-box
+
+.accordionItemHeading
+	position: relative
+	cursor: pointer
+	padding: 30px 145px 20px 80px
+	background: #DFEFFC
+	color: #fff
+	width: 100%
+	display: flex
+	justify-content: space-between
+	&::before
+		content: ''
+		position: absolute
+		right: 27px
+		top: calc(50% - 21px)
+		display: block
+		width: 43px
+		height: 43px
+		border: 1px solid #000000
+		border-radius: 50%
+		background-image: url('./image/arrow.svg')
+		background-repeat: no-repeat
+		background-position: 50%
+		@media screen and ( max-width: 640px )
+			display: none
+	&__col
+		display: flex
+		align-items: center
+		font-size: 20px
+		font-weight: 700
+		color: #000000
+		@media screen and ( max-width: 1024px )
+			font-size: 16px
+		@media screen and ( max-width: 1023px )
+			font-size: 14px
+			
+		@media screen and ( max-width: 767px )
+			font-size: 12px
+			font-weight: normal
+		&_maw-200
+			max-width: 200px
+		
+.close .accordionItemContent
+	height: 0px
+	transition: height 1s ease-out
+	transform: scaleY(0)
+	display: block
+    
+.open .accordionItemContent
+	width: 100%
+	display: block
+	transform: scaleY(1)
+	transform-origin: top
+	transition: transform 0.4s ease
+
+.accordionItemContent
+	&__col
+		margin-top: 5px
+		display: flex
+		justify-content: space-between
+		padding: 20px 145px 20px 80px
+		background: rgba(248, 248, 248, 0.8)
+		&:nth-child(2n)
+			background: rgba(239, 239, 239, 0.85)
+
+	&__text
+		max-width: 200px
+		width: 100%
+		font-size: 16px
+		color: #000000
+		@media screen and ( max-width: 767px )
+			font-size: 12px
+			
+.accordionItemContent__col,
+.accordionItemHeading
+	@media screen and ( max-width: 640px )
+		padding-right: 20px
+		padding-left: 20px
+
+.open .accordionItemHeading
+	margin: 0px
+	border-top-left-radius: 3px
+	border-top-right-radius: 3px
+	border-bottom-right-radius: 0px
+	border-bottom-left-radius: 0px
+
+// equipment-price
+.equipment-price
+	padding-top: 80px
+	.accordionItemContent__text
+		max-width: 100%
+		&:first-child
+			width: 80%
+		&:last-child
+			width: 20%
+			text-align: center
+// end equipment-price
+// mounting-price
+.mounting-price
+	padding-top: 70px
+	display: flex
+	flex-direction: column
+	align-items: center
+	.accordionItem
+		margin-top: 55px
+	.accordionItemHeading__col
+		width: 25%
+		&:not(:first-child)
+			@media screen and ( max-width: 1023px )
+				margin-left: 10px
+	.accordionItemContent__text
+		max-width: 100%
+		width: 25%
+	.price-info
+		max-width: 630px
+		&__title
+			line-height: 22px
+// end accordion
+// end price
+// examples
+.examples
+	padding-top: 95px
+	padding-bottom: 200px
+	background: linear-gradient(151.79deg, #0A2D55 10.33%, #082858 77.04%)
+	@media screen and ( max-width: 1023px )
+		padding-bottom: 100px
+		padding-top: 60px
+	@media screen and ( max-width: 768px )
+		padding-bottom: 130px
+	@media screen and ( max-width: 767px )
+		padding-bottom: 80px
+	&__title
+		color: #ffffff
+		text-align: center
+	&__wrapper
+		padding-top: 90px
+		@media screen and ( max-width: 1023px )
+			padding-top: 50px
+	.swiper-container
+		width: 100%
+		max-width: 1500px
+		height: 440px
+		@media screen and ( max-width: 768px )
+			height: 240px
+		@media screen and ( max-width: 767px )
+			overflow: inherit
+	.swiper-slide
+		width: 770px
+		height: 100%
+		// background: #C4C4C4
+		@media screen and ( max-width: 1023px )
+			max-width: 570px
+		@media screen and ( max-width: 1023px )
+			max-width: 470px
+		@media screen and ( max-width: 560px )
+			max-width: 311px
+			
+		img
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			width: 100%
+			opacity: 0.2
+			transition: opacity 0.5s
+			border-radius: 15px
+		&.swiper-slide-active
+			img
+				opacity: 1
+
+	.slider-button-prev,
+	.slider-button-next
+		color: #4DE1FF
+
+	.slider-button-prev
+		transform: translateY(-50%) scaleX(-1)
+		left: 15%
+		@media screen and ( max-width: 700px )
+			left: calc( 50% - 58px )
+	.slider-button-next
+		right: 15%
+		@media screen and ( max-width: 700px )
+			right: calc( 50% - 58px )
+			
+	.slider-button-prev,
+	.slider-button-next
+		@media screen and ( max-width: 700px )
+			top: auto
+			bottom: -30% 
+
+// end examples
+// certificates
+.certificates
+	padding-top: 90px
+	padding-bottom: 90px
+	background-color: #fff
+	@media screen and ( max-width: 767px )
+		padding-top: 65px
+	@media screen and ( max-width: 530px )
+		padding-bottom: 40px
+	&__title
+		@media screen and ( max-width: 530px )
+			max-width: 200px
+			margin: 0 auto
+	&__wrapper
+.swiper-box
+	max-width: 335px
+	margin: 0 auto
+	padding-top: 90px
+	padding-bottom: 90px
+	position: relative
+	@media screen and ( max-width: 767px )
+		padding-top: 40px
+		max-width: 300px
+	@media screen and ( max-width: 530px )
+		max-width: 250px
+	.swiper-wrapper
+		box-shadow: 40px 40px 40px 0px rgba(0,0,0,0.5)
+		background-color: #C4C4C4
+		background-size: cover
+		background-image: url('./image/sert-bg.jpg')
+	.swiper-slide
+		width: 450px
+		position: relative
+		&__container
+			width: 100%
+			padding-top: 133.3333%
+		img
+			display: block
+			width: 75%
+			position: absolute
+			left: 12.5%
+			top: 10.5%
+		&:hover
+			opacity: 1
+
+	.swiper-pagination
+		@media screen and ( max-width: 530px )
+			bottom: -5%
+	.slider-button-next
+		color: #009DFF
+	.slider-button-prev
+		transform: translateY(-50%) scaleX(-1)
+		right: 110%
+		left: auto
+		@media screen and ( max-width: 530px )
+			left: 0
+	.slider-button-next
+		left: 110%
+		@media screen and ( max-width: 530px )
+			left: auto
+			right: 0
+	.slider-button-prev,
+	.slider-button-next
+		@media screen and ( max-width: 530px )
+			top: auto
+			bottom: -14%
+	.swiper-pagination-bullet
+		width: 16px
+		height: 16px
+		background-color: #C4C4C4
+		opacity: 1
+		@media screen and ( max-width: 530px )
+			width: 12px
+			height: 12px
+	.swiper-pagination-bullet-active
+		background: #00B7FF
+.swiper-container-horizontal
+	> .swiper-pagination-bullets 
+		.swiper-pagination-bullet		
+			margin: 0 8px
+// end - certificates
+// blog
+.blog
+	padding-top: 90px
+	padding-bottom: 90px
+	@media screen and ( max-width: 530px )
+		padding-bottom: 60px
+	&__subtitle
+		text-align: center
+		margin: 25px auto 50px auto
+		max-width: 700px
+	&__btn
+		margin: 40px auto 0
+	&__wrapper
+		display: flex
+		justify-content: center
+		margin-left: -15px
+		margin-right: -15px
+		padding: 0 15px
+		@media screen and ( max-width: 1023px )
+			flex-wrap: wrap
+			
+	&__item
+		flex: 33%
+		margin-left: 15px
+		margin-right: 15px
+		&:not(:first-child)
+			@media screen and ( max-width: 530px )
+				margin-top: 50px
+			
+		&:last-child
+			@media screen and ( max-width: 1023px )
+				margin-top: 30px
+		img
+			width: 100%
+			border-radius: 15px
+
+.blog-item
+	&__title
+		display: block
+		font-size: 22px
+		font-weight: 800
+		margin-top: 40px
+		@media screen and ( max-width: 530px )
+			font-weight: 500
+	&__text
+		margin-top: 20px
+		line-height: 17px
+		font-size: 14px
+	// end blog
+// video-blog
+.video-blog
+	padding-top: 50px
+	padding-bottom: 90px
+	background: linear-gradient(252.37deg, #00EEFF 20.25%, #009DFF 58.29%, #6DC5FC 88.26%), rgba(205, 12, 17, 0.99)
+	@media screen and ( max-width: 768px )
+		padding-top: 20px
+	@media screen and ( max-width: 767px )
+		padding-bottom: 40px
+	&__title
+		color: #fff
+	&__wrapper
+		text-align: center
+		max-width: 1120px
+		margin: 0 auto
+		@media screen and ( max-width: 1024px )
+			max-width: 800px
+		@media screen and ( max-width: 768px )
+		@media screen and ( max-width: 530px )
+			max-width: 300px
+		iframe
+			width: 100%
+			height: 630px
+			@media screen and ( max-width: 1024px )
+				height: 430px
+			@media screen and ( max-width: 530px )
+				height: 150px
+	&__wrapper-frame
+		padding-top: 70px
+		@media screen and ( max-width: 767px )
+			padding-top: 20px
+// end - video-blog
+// form
+.form-page
+	padding-top: 90px
+	background-color: #F4F4F4
+	overflow: hidden
+	@media screen and ( max-width: 768px )
+		padding-top: 50px
+	&__title
+		margin: 0
+		font-size: 36px
+		font-weight: 800
+		line-height: 44px
+		@media screen and ( max-width: 768px )
+			text-align: center
+			line-height: 30px
+		@media screen and ( max-width: 767px )
+			font-size: 24px
+	&__subtitle
+		margin-top: 20px
+		margin-bottom: 0
+		font-size: 20px
+		font-weight: 500
+		@media screen and ( max-width: 530px )
+			font-size: 14px	
+	&__wrapper
+		display: flex
+		@media screen and ( max-width: 1023px )
+			justify-content: center
+	&__left
+		max-width: 440px
+		width: 100%
+		@media screen and ( max-width: 1200px )
+			max-width: 100%
+		@media screen and ( max-width: 768px )
+			display: flex
+			flex-direction: column
+			align-items: center
+		
+	&__right
+		font-size: 0
+		display: flex
+		@media screen and ( max-width: 1023px )
+			display: none
+		img
+			@media screen and ( max-width: 1200px )
+				width: 100%
+	&__propmt
+		font-weight: 300
+		font-size: 12px
+		color: #9D9898
+		margin-top: 30px
+		a
+			color: #9D9898
+		@media screen and ( max-width: 1200px )
+			margin-bottom: 20px
+
+.form-box
+	margin-top: 45px
+	@media screen and ( max-width: 1023px )
+		max-width: 80%
+		margin: 0 auto
+	@media screen and ( max-width: 530px )
+		margin-top: 0
+		max-width: 100%
+	&__btn
+		margin-top: 60px
+		@media screen and ( max-width: 1200px )
+			margin: 40px auto 0
+// end form
+// contacts
+.contacts
+	padding-top: 70px
+	padding-bottom: 165px
+	background-image: url('./image/mapbg.jpg')
+	background-size: cover
+	&__title
+		font-size: 38px
+		font-weight: 900
+	&__card
+		margin-top: 70px
+.card-contact
+	background-color: #ffffff
+	max-width: 390px
+	width: 100%
+	padding: 50px 40px 70px 75px
+	display: flex
+	flex-direction: column
+	&__locate
+		position: relative
+		font-size: 20px
+		font-weight: 800
+		display: block
+		&::before
+			content: ''
+			position: absolute
+			display: block
+			left: -30px
+			top: 50%
+			transform: translateY(-50%)
+			width: 14px
+			height: 17px
+			background-image: url('./image/marker.svg')
+
+	&__item
+		font-size: 14px
+		color: #232323
+		text-decoration: none
+		margin-top: 10px
+		&_lh26
+			line-height: 26px
+		&_link
+			transition: all .2s
+			text-decoration: underline
+			text-decoration-color: transparent
+			&:hover
+				text-decoration-color: #232323
+				transition: all .2s
+// end contacts
+// end main
+.footer
+	background-color: #0D0C0A
+	padding-top: 20px
+	padding-bottom: 30px
+	&__text
+		font-size: 12px
+		color: #B6F0FC
+		letter-spacing: 0.02em
+		text-decoration: none
+		margin: 0
+		@media screen and ( max-width: 768px )
+			order: 1
+			margin-top: 10px
+		&_move-down
+			@media screen and ( max-width: 767px )
+				order: 2
+	&__link-list
+		display: flex
+		align-items: center
+		@media screen and ( max-width: 700px )
+			flex-direction: column
+	&__link
+		font-size: 16px
+		color: #ffffff
+		line-height: 22px
+		margin-left: 70px
+		text-decoration: none
+		white-space: nowrap
+		@media screen and ( max-width: 1300px )
+			margin-left: 20px
+			font-size: 14px
+		@media screen and ( max-width: 1023px )
+			font-size: 12px
+		&.link-top
+			margin-left: 70px
+			@media screen and ( max-width: 1300px )
+				margin-left: 20px
+			@media screen and ( max-width: 530px )
+				position: absolute
+				top: 0
+				right: 10px
+		&_underline
+			text-decoration: underline
+			font-weight: 500
+	&__wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+		@media screen and ( max-width: 1023px )
+			flex-wrap: wrap
+			justify-content: space-around
+		@media screen and ( max-width: 768px )
+			max-width: 80%
+			margin: 0 auto
+		@media screen and ( max-width: 700px )
+			flex-direction: column
+			max-width: 100%
+			position: relative
+			
+	.logo
+		&__title
+			font-size: 20px
+			color: #fff
+			@media screen and ( max-width: 1023px )
+				font-size: 16px
+		&__subtitle
+			font-size: 8px
+			color: #fff
+		@media screen and ( max-width: 1300px )
+			max-width: 200px
+		svg
+			@media screen and ( max-width: 1300px )
+				width: 35px
+				height: 32px
+
+
+.link-top
+	display: block
+	width: 40px
+	height: 40px
+	background-color: #4DE1FF
+	border-radius: 3px
+	color: #fff
+	display: flex
+	justify-content: center
+	align-items: center
+	margin: 0
+	svg
+		transform: rotate(270deg)
