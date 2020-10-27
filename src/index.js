@@ -1,5 +1,6 @@
 import * as FsLightbox from 'fslightbox';
 
+
 // accordion
 let accItem = document.getElementsByClassName('accordionItem');
 let accHD = document.getElementsByClassName('accordionItemHeading');
@@ -80,4 +81,25 @@ var mySwiper2 = new Swiper('.swiper-box', {
     el: '.swiper-scrollbar',
   },
 })
-// end slider 
+// end slider
+// modal
+let modalOpen = document.getElementsByClassName('btn-modal');
+let bodyVar = document.getElementsByTagName('body');
+let modalClose = document.querySelector('[data-modal="close"]');
+let modalWrapper = document.querySelector('[data-modal="wrapper"]');
+let openModal = () => {
+	modalWrapper.classList.add("modal-opened");
+	bodyVar[0].classList.add("oveflowHidden")
+}
+let closeModal = () => {
+	modalWrapper.classList.remove("modal-opened")
+	bodyVar[0].classList.remove("oveflowHidden")
+}
+
+for(let i = 0; i < modalOpen.length; i++) {
+  modalOpen[i].addEventListener('click', openModal, false);
+}
+modalClose.onclick = () => {
+  closeModal();
+}
+// end modal

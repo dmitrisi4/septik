@@ -41,7 +41,7 @@
 							<a href="tel:+78162559493" class="nav__link">+7 (816 2) 55-94-93</a>
 							<a href="mailto:biosfera53@mail.ru" class="nav__link nav__link_hide">biosfera53@mail.ru</a>
 						</div>
-						<a href="#form-page" class="nav__btn btn btn_type-1">Обратный звонок</a>
+						<button class="nav__btn btn btn_type-1 btn-modal" data-modal="open">Обратный звонок</button>
 					</div>
 				</div>
 				<!-- nav/ -->
@@ -51,7 +51,7 @@
 						<strong class="titles-main__title titles-main__title_large">СЕПТИКИ</strong>
 						<span class="titles-main__title titles-main__title_margin-left">в Великом Новгороде</span>
 					</div>
-					<a href="#form-page" class="title-screen__btn btn btn_type-main">Заказать</a>
+					<button class="title-screen__btn btn btn_type-main btn-modal" data-modal="open">Заказать</button>
 					<ul class="title-screen__advantages-list advantages-list">
 						<li class="advantages-list__list-item">
 							<img src="./image/water-filter.svg" alt="water filter">							
@@ -100,7 +100,7 @@
 								<img class="service-item__image" src="./image/service-3.png" alt="Сервис">
 							</div>
 						</div>
-						<a href="#form-page" class="services__btn btn btn_type-main">Заказать</a>
+						<button data-modal="open" class="services__btn btn btn_type-main btn-modal">Заказать</button>
 					</div>
 				</div>
 			</section>
@@ -318,7 +318,7 @@
 						</div>
 						<!-- end  accordion -->
 						<div class="price__price-footer">
-							<a href="#form-page" class="price__btn btn btn_type-main">Заказать</a>
+							<button data-modal="open" class="price__btn btn btn_type-main btn-modal">Заказать</button>
 							<button type="button" class="price__btn price__btn_hide btn btn_white" id="btnHide">Свернуть все</button>
 						</div>
 					</div>
@@ -440,7 +440,7 @@
 							<p class="blog-item__text">Удобство транспортировки и легкость монтажа за счёт наличия монтажных петель, малого веса, а также ребер жесткости каркаса, позволяющих осуществить монтаж без дополнительного бетонирования</p>
 						</div>
 					</div>
-					<a href="#" class="blog__btn btn btn_type-main">Заказать</a>
+					<button data-modal="open"class="blog__btn btn btn_type-main btn-modal">Заказать</button>
 
 				</div>
 			</section>
@@ -482,16 +482,16 @@
 							<h3 class="form-page__title">Остались вопросы, нужна консультация? 
 							</h3>
 							<p class="form-page__subtitle">Хотите вызвать специалиста на замер?</p>
-							<div class="form-page__form form-box">
-								<form action="">
-									<input type="text" class="form-box__input input-theme" placeholder="Ваше имя">
-									<input type="text" class="form-box__input input-theme" placeholder="Ваш телефон">
-									<input type="text" class="form-box__input input-theme" placeholder="E-mail">
-									<button class="form-box__btn btn btn_type-main">Заказать</button>
-								</form>
-								<p class="form-page__propmt">Нажимая кнопку  «Заказать» вы соглашаетесь на обработку
-									персональных данных на условиях <a href="#">Соглашения.</a></p>
-							</div>
+								<div class="form-page__form form-box">
+									<form action="">
+										<input type="text" class="form-box__input input-theme" placeholder="Ваше имя">
+										<input type="text" class="form-box__input input-theme" placeholder="Ваш телефон">
+										<input type="text" class="form-box__input input-theme" placeholder="E-mail">
+										<button class="form-box__btn btn btn_type-main">Заказать</button>
+									</form>
+									<p class="form-page__propmt">Нажимая кнопку  «Заказать» вы соглашаетесь на обработку
+										персональных данных на условиях <a href="#">Соглашения.</a></p>
+								</div>
 						</div>
 
 						<div class="form-page__right">
@@ -532,7 +532,29 @@
 				</div>
 			</div>
 		</footer>
+		<!-- modal -->
+		<div class="modal-wrapper" data-modal="wrapper">
+			<div class="modal-content">
+				<div class="relative">
+					<button data-modal="close" class="btn-close"></button>
+	
+					<div class="form-page__form form-box">
+						<p class="form-box__title">Заполните форму<br/> и мы вам перезвоним</p>
+						<form action="https://formspree.io/f/mrgoqnjo" method="POST">
+							<input type="text" class="form-box__input input-theme" placeholder="Ваше имя" name="name">
+							<input type="text" class="form-box__input input-theme" placeholder="Ваш телефон" name="number">
+							<input type="text" class="form-box__input input-theme" placeholder="E-mail" name="_replyto">
+							<button class="form-box__btn btn btn_type-main">Заказать</button>
+						</form>
+						<p class="form-page__propmt">Нажимая кнопку  «Заказать» вы соглашаетесь на обработку
+							персональных данных на условиях <a href="#">Соглашения.</a></p>
+				</div>
+
+			</div>
+		</div>
+		<!-- end modal  -->
 	</div>
+	<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="./index.js"></script>
 </body>

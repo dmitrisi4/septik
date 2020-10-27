@@ -209,4 +209,28 @@ var mySwiper2 = new Swiper('.swiper-box', {
     el: '.swiper-scrollbar'
   }
 }); // end slider
+// modal
+
+var modalOpen = document.getElementsByClassName('btn-modal');
+var bodyVar = document.getElementsByTagName('body');
+var modalClose = document.querySelector('[data-modal="close"]');
+var modalWrapper = document.querySelector('[data-modal="wrapper"]');
+
+var openModal = function openModal() {
+  modalWrapper.classList.add("modal-opened");
+  bodyVar[0].classList.add("oveflowHidden");
+};
+
+var closeModal = function closeModal() {
+  modalWrapper.classList.remove("modal-opened");
+  bodyVar[0].classList.remove("oveflowHidden");
+};
+
+for (var _i3 = 0; _i3 < modalOpen.length; _i3++) {
+  modalOpen[_i3].addEventListener('click', openModal, false);
+}
+
+modalClose.onclick = function () {
+  closeModal();
+}; // end modal
 },{"fslightbox":"kN9C"}]},{},["Focm"], null)
