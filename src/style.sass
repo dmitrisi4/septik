@@ -29,6 +29,9 @@ html,	body
 	flex: 1 0 auto
 .footer
 	flex: 0 0 auto
+
+.map
+	width: 100%
 // 
 // 
 //modal
@@ -1028,16 +1031,23 @@ html,	body
 // end form
 // contacts
 .contacts
-	padding-top: 70px
-	padding-bottom: 165px
-	background-image: url('./image/mapbg.jpg')
-	background-size: cover
+	position: relative
+	// background-image: url('./image/mapbg.jpg')
+	// background-size: cover
+	font-size: 0		
+	&__wrapper
+		position: absolute
+		padding: 60px 10% 0
+		width: 100%
+		top: 0
+		
 	&__title
 		font-size: 38px
 		font-weight: 900
 	&__card
 		margin-top: 70px
 .card-contact
+	position: absolute
 	background-color: #ffffff
 	max-width: 390px
 	width: 100%

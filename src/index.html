@@ -459,7 +459,9 @@
 			<!-- end video-blog -->
 				<!-- contacts -->
 				<section class="contacts">
-					<div class="container">
+					<div style="position:relative;overflow:hidden;pointer-events: none;">
+						 <iframe src="https://yandex.ua/map-widget/v1/-/CCQ~68HoCA" width="100%" height="690" frameborder="1" allowfullscreen="true" style="position:relative;border: 0;"></iframe>
+					</div>
 						<div class="contacts__wrapper">
 							<h3 class="contacts__title">Контакты</h3>
 							<div class="contacts__card card-contact">
@@ -471,7 +473,6 @@
 								<p class="card-contact__item card-contact__item_lh-26">пн–сб: 9:00 – 20:00<br/>	вс: 9:00 – 19:00</p>
 							</div>
 						</div>
-					</div>
 				</section>
 				<!-- end contacts -->
 			<!-- form -->
@@ -483,10 +484,10 @@
 							</h3>
 							<p class="form-page__subtitle">Хотите вызвать специалиста на замер?</p>
 								<div class="form-page__form form-box">
-									<form action="">
-										<input type="text" class="form-box__input input-theme" placeholder="Ваше имя">
-										<input type="text" class="form-box__input input-theme" placeholder="Ваш телефон">
-										<input type="text" class="form-box__input input-theme" placeholder="E-mail">
+									<form action="https://formspree.io/f/mrgoqnjo" method="POST">
+										<input type="text" class="form-box__input input-theme" placeholder="Ваше имя" name="name">
+										<input type="text" class="form-box__input input-theme" placeholder="Ваш телефон" name="number">
+										<input type="text" class="form-box__input input-theme" placeholder="E-mail" name="mail">
 										<button class="form-box__btn btn btn_type-main">Заказать</button>
 									</form>
 									<p class="form-page__propmt">Нажимая кнопку  «Заказать» вы соглашаетесь на обработку

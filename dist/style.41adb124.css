@@ -45,6 +45,10 @@ html, body {
   flex: 0 0 auto;
 }
 
+.map {
+  width: 100%;
+}
+
 .oveflowHidden {
   overflow: hidden;
 }
@@ -1495,10 +1499,14 @@ html, body {
 }
 
 .contacts {
-  padding-top: 70px;
-  padding-bottom: 165px;
-  background-image: url("mapbg.45e243ac.jpg");
-  background-size: cover;
+  position: relative;
+  font-size: 0;
+}
+.contacts__wrapper {
+  position: absolute;
+  padding: 60px 10% 0;
+  width: 100%;
+  top: 0;
 }
 .contacts__title {
   font-size: 38px;
@@ -1509,6 +1517,7 @@ html, body {
 }
 
 .card-contact {
+  position: absolute;
   background-color: #ffffff;
   max-width: 390px;
   width: 100%;
