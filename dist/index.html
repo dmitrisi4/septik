@@ -5,13 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Septik</title>
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-	<link rel="stylesheet" href="style.c04ef638.css">
+	<link rel="stylesheet" href="style.be0cdfb4.css">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
 	<div class="wrapper">
+		<!-- svg -->
 		<svg class="icon-defs">
 			<defs>
 				<symbol id="icon-arrow-right" viewBox="0 0 17 17">
@@ -21,6 +22,19 @@
 				</symbol>
 			</defs>
 		</svg>
+		<!-- / -->
+		<svg class="icon-close">
+			<defs>
+				<symbol id="icon-close" viewBox="0 0 22 22">
+					<g>
+						<path fill="none" d="M20 2L2 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+						<path fill="none" d="M2 2L20 20" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>
+					</g>
+				</symbol>
+			</defs>
+		</svg>
+		<!-- end svg -->
+
 		<header class="header" id="top">
 			<div class="container">
 				<!-- nav -->
@@ -49,7 +63,7 @@
 					<div class="title-screen__titles-main titles-main">
 						<span class="titles-main__title titles-main__title_pos-right">Станции биологической очистки</span>
 						<strong class="titles-main__title titles-main__title_large">СЕПТИКИ</strong>
-						<span class="titles-main__title titles-main__title_margin-left">в Великом Новгороде</span>
+						<span class="titles-main__title titles-main__title_margin">в Великом Новгороде</span>
 					</div>
 					<button class="title-screen__btn btn btn_type-main btn-modal" data-modal="open">Заказать</button>
 					<ul class="title-screen__advantages-list advantages-list">
@@ -59,7 +73,7 @@
 						</li>
 						<li class="advantages-list__list-item">
 							<img src="filter.25572ba1.svg" alt="filter">
-							<p class="advantages-list__text">Неприяиный запах отсутствует</p>
+							<p class="advantages-list__text">Неприятный запах отсутствует</p>
 						</li>
 						<li class="advantages-list__list-item">
 							<img src="house.b647674f.svg" alt="house">
@@ -451,7 +465,7 @@
 					<div class="video-blog__wrapper">
 						<h2 class="video-blog__title page-title">Полезное видео</h2>
 						<div class="video-blog__wrapper-frame">
-								<iframe src="https://www.youtube.com/embed/epSy8nikN04" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+								<iframe src="https://www.youtube.com/embed/1fE80GRFcic?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 						</div>
 					</div>
 				</div>
@@ -484,11 +498,11 @@
 							</h3>
 							<p class="form-page__subtitle">Хотите вызвать специалиста на замер?</p>
 								<div class="form-page__form form-box">
-									<form action="https://formspree.io/f/mrgoqnjo" method="POST">
-										<input type="text" class="form-box__input input-theme" placeholder="Ваше имя" name="name">
-										<input type="text" class="form-box__input input-theme" placeholder="Ваш телефон" name="number">
-										<input type="text" class="form-box__input input-theme" placeholder="E-mail" name="mail">
-										<button class="form-box__btn btn btn_type-main">Заказать</button>
+									<form method="post" action="contact-form-process.php" name="footer-form">
+										<input type="text" class="form-box__input input-theme" placeholder="Ваше имя" name="name" required="">
+										<input type="tel" class="form-box__input input-theme" placeholder="Ваш телефон" name="number" required="">
+										<input type="email" class="form-box__input input-theme" placeholder="E-mail" name="mail" required="">
+										<button type="submit" class="form-box__btn btn btn_type-main">Заказать</button>
 									</form>
 									<p class="form-page__propmt">Нажимая кнопку  «Заказать» вы соглашаетесь на обработку
 										персональных данных на условиях <a href="#">Соглашения.</a></p>
@@ -522,7 +536,7 @@
 					<p class="footer__text footer__text_move-down">© 2020 Биосфера</p>
 					<a href="#" class="footer__text">Политика конфиденциальности</a>
 					<div class="footer__link-list">
-						<a href="tel:+78162559493" class="footer__link">+7 (816 2) 55-94-93</a>
+						<a href="tel:+78162559493" class="footer__link footer__link_tel">+7 (816 2) 55-94-93</a>
 						<a href="mailto:biosfera53@mail.ru" class="footer__link footer__link_underline">biosfera53@mail.ru</a>
 						<a href="#top" class="footer__link link-top">
 							<svg width="17" height="17" class="icon-arrow-right" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -533,19 +547,24 @@
 				</div>
 			</div>
 		</footer>
+
 		<!-- modal -->
 		<div class="modal-wrapper" data-modal="wrapper">
 			<div class="modal-content">
 				<div class="relative">
-					<button data-modal="close" class="btn-close"></button>
+					<button data-modal="close" class="btn-close">
+						<svg width="18" height="18" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<use xlink:href="#icon-close"></use>
+						</svg>
+					</button>
 	
 					<div class="form-page__form form-box">
 						<p class="form-box__title">Заполните форму<br> и мы вам перезвоним</p>
-						<form action="https://formspree.io/f/mrgoqnjo" method="POST">
+						<form method="post" action="contact-form-process.php" name="modal-form">
 							<input type="text" class="form-box__input input-theme" placeholder="Ваше имя" name="name">
 							<input type="text" class="form-box__input input-theme" placeholder="Ваш телефон" name="number">
 							<input type="text" class="form-box__input input-theme" placeholder="E-mail" name="mail">
-							<button class="form-box__btn btn btn_type-main">Заказать</button>
+							<button type="submit" class="form-box__btn btn btn_type-main">Заказать</button>
 						</form>
 						<p class="form-page__propmt">Нажимая кнопку  «Заказать» вы соглашаетесь на обработку
 							персональных данных на условиях <a href="#">Соглашения.</a></p>
@@ -557,6 +576,6 @@
 	</div>
 	<script src="https://formspree.io/js/formbutton-v1.min.js" defer=""></script>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-	<script src="src.e074d783.js"></script>
+	<script src="src.b889d2e5.js"></script>
 </div></body>
 </html>

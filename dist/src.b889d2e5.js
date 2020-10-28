@@ -232,5 +232,31 @@ for (var _i3 = 0; _i3 < modalOpen.length; _i3++) {
 
 modalClose.onclick = function () {
   closeModal();
-}; // end modal
+};
+
+var footerForm = document.forms.namedItem('footer-form');
+var modalForm = document.forms.namedItem('modal-form');
+footerForm.addEventListener('submit', handleFormSubmit);
+modalForm.addEventListener('submit', handleFormSubmit);
+
+function handleFormSubmit(event) {
+  event.preventDefault();
+  formSubmit(event.target);
+}
+
+function formSubmit(form) {
+  var formData = new FormData(form);
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', form.getAttribute('action'), true);
+
+  xhr.onload = function () {
+    var message = this.responseText.startsWith('We are very sorry') ? 'error' : 'Отправлено';
+    alert(message);
+  }; // SEND
+
+
+  xhr.send(formData);
+  footerForm.reset();
+  modalForm.reset();
+} // end modal
 },{"fslightbox":"kN9C"}]},{},["Focm"], null)

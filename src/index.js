@@ -102,4 +102,30 @@ for(let i = 0; i < modalOpen.length; i++) {
 modalClose.onclick = () => {
   closeModal();
 }
+
+let footerForm = document.forms.namedItem('footer-form');
+let modalForm = document.forms.namedItem('modal-form');
+
+footerForm.addEventListener('submit', handleFormSubmit);
+modalForm.addEventListener('submit', handleFormSubmit);
+
+function handleFormSubmit(event) {
+	event.preventDefault();
+	formSubmit(event.target);
+}
+
+function formSubmit(form) {
+	let formData = new FormData(form);
+	let xhr = new XMLHttpRequest();
+	xhr.open('POST', form.getAttribute('action'), true);
+	xhr.onload = function() {
+		let message = this.responseText.startsWith('We are very sorry') ? 'error' : 'Отправлено';
+		alert(message);
+	};
+	// SEND
+	xhr.send(formData);
+	footerForm.reset();
+	modalForm.reset();
+}
+
 // end modal

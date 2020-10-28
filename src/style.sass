@@ -12,7 +12,7 @@ html,	body
 	margin: 0
 	padding: 0
 
-.icon-defs
+.icon-defs, .icon-close
 	display: none
 .container
 	max-width: 1280px
@@ -61,10 +61,10 @@ html,	body
 	cursor: pointer
 	border: 0
 	background: transparent
-	background-image: url('./image/close.svg')
-	background-size: cover
 	color: #05CD99
 	font-size: 18px
+	&:hover
+		color: #009DFF
 	@media screen and ( max-width: 470px )
 		top: 20px
 		right: 20px
@@ -73,7 +73,7 @@ html,	body
 
 
 .modal-content
-	max-width: 685px
+	max-width: 585px
 	width: 100%
 	position: absolute
 	top: 50%
@@ -84,7 +84,8 @@ html,	body
 	z-index: 10
 	background-color: #fff
 	border-radius: 15px
-	padding: 80px 140px 80px 110px
+	padding: 80px 100px 80px 110px
+	opacity: 0
 	@media screen and ( max-width: 768px )
 		padding: 80px 100px 80px 70px
 		max-width: 80%
@@ -109,6 +110,8 @@ html,	body
 	background-color: rgba(0,0,0,.7)
 	transition: .4s
 	z-index: 100
+	.modal-content
+		opacity: 1
 	
 
 //
@@ -195,16 +198,20 @@ html,	body
 		cursor: pointer
 	&_type-1
 		max-width: 175px
-		height: 30px
+		height: 35px
 		font-size: 12px
 		border: 1px solid #000
+		background: transparent
 	&_type-main
+		font-size: 16px
 		box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25)
 		background: linear-gradient(180deg, #24FAED 0%, #00C58A 100%)
 		&:hover
-			background: linear-gradient(180deg, #24FAED 0%, #22F6E6 22.92%, #00F0A8 100%)
+			// background: linear-gradient(180deg, #24FAED 0%, #22F6E6 22.92%, #00F0A8 100%)
+			background: linear-gradient(180deg, #51F5FF 0%, #009DFF 100%)
+			box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25)
 			transition: all .2s
-			filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5))
+			// filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5))
 
 	&_drop-shadow
 	&_white
@@ -243,7 +250,11 @@ html,	body
 .header
 	background-image: url('./image/screenbg2.webp')
 	background-size: cover
+	background-position: center
 	padding-top: 25px
+	padding-bottom: 40px
+	@media screen and ( max-width: 530px )
+		padding-bottom: 15px
 	@media screen and ( max-width: 530px )
 		padding-top: 15px
 	.nav__links
@@ -307,8 +318,11 @@ html,	body
 				font-size: 93px
 			@media screen and ( max-width: 520px )
 				font-size: 55px
-		&_margin-left
+		&_margin
+			margin-top: -20px
 			margin-left: 200px
+			@media screen and ( max-width: 1024px )
+				margin-top: 0
 			@media screen and ( max-width: 520px )
 				margin-left: 0
 				font-weight: 700
@@ -332,7 +346,7 @@ html,	body
 		align-items: center
 		
 	&__link
-		font-size: 12px
+		font-size: 14px
 		color: #000
 		font-weight: normal
 		text-decoration: none
@@ -565,10 +579,9 @@ html,	body
 		&:not(:first-child)
 			margin-left: 10px
 	.accordionItemHeading__col
-		@media screen and ( max-width: 768px )
-			display: flex
-			flex-direction: column
-			align-items: flex-start
+		display: flex
+		flex-direction: column
+		align-items: flex-start
 	.accordionItemContent__text
 		&:not(:first-child)
 			@media screen and ( max-width: 768px )
@@ -597,7 +610,10 @@ html,	body
 	display: block
 	width: 100%
 	box-sizing: border-box
-
+	&.open
+		.accordionItemHeading
+			&::before
+				transform: rotate(180deg)
 .accordionItemHeading
 	position: relative
 	cursor: pointer
@@ -607,6 +623,9 @@ html,	body
 	width: 100%
 	display: flex
 	justify-content: space-between
+	&:hover
+		&::before
+			opacity: 0.5	
 	&::before
 		content: ''
 		position: absolute
@@ -620,6 +639,7 @@ html,	body
 		background-image: url('./image/arrow.svg')
 		background-repeat: no-repeat
 		background-position: 50%
+		transition: all .2s
 		@media screen and ( max-width: 640px )
 			display: none
 	&__col
@@ -871,7 +891,7 @@ html,	body
 // end - certificates
 // blog
 .blog
-	padding-top: 90px
+	padding-top: 50px
 	padding-bottom: 90px
 	@media screen and ( max-width: 530px )
 		padding-bottom: 60px
@@ -915,7 +935,7 @@ html,	body
 			font-weight: 500
 	&__text
 		margin-top: 20px
-		line-height: 17px
+		line-height: 21px
 		font-size: 14px
 	// end blog
 // video-blog
@@ -1007,7 +1027,7 @@ html,	body
 			margin-bottom: 20px
 
 .form-box
-	margin-top: 45px
+	margin-top: 20px
 	&__title
 		max-width: 320px
 		font-weight: 700
@@ -1025,7 +1045,7 @@ html,	body
 		margin-top: 0
 		max-width: 100%
 	&__btn
-		margin-top: 60px
+		margin-top: 40px
 		@media screen and ( max-width: 1200px )
 			margin: 40px auto 0
 // end form
@@ -1053,6 +1073,9 @@ html,	body
 	padding: 50px 40px 70px 75px
 	display: flex
 	flex-direction: column
+	@media screen and ( max-width: 767px )
+		left: 50%
+		transform: translateX(-50%)
 	&__locate
 		position: relative
 		font-size: 20px
@@ -1073,7 +1096,7 @@ html,	body
 		font-size: 14px
 		color: #232323
 		text-decoration: none
-		margin-top: 10px
+		margin-top: 20px
 		&_lh26
 			line-height: 26px
 		&_link
@@ -1113,6 +1136,16 @@ html,	body
 		margin-left: 70px
 		text-decoration: none
 		white-space: nowrap
+		&_tel
+			position: relative
+			padding: 30px
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				width: 19px
+				height: 19px
+				background-image: url('./image/tel.svg')
 		@media screen and ( max-width: 1300px )
 			margin-left: 20px
 			font-size: 14px
