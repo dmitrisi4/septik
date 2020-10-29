@@ -598,7 +598,7 @@ html, body {
 }
 @media screen and (max-width: 530px) {
   .page-subtitle {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -944,6 +944,11 @@ html, body {
     font-weight: normal;
   }
 }
+@media screen and (max-width: 530px) {
+  .accordionItemHeading__col {
+    font-size: 10px;
+  }
+}
 .accordionItemHeading__col_maw-200 {
   max-width: 200px;
 }
@@ -988,8 +993,8 @@ html, body {
 @media screen and (max-width: 640px) {
   .accordionItemContent__col,
 .accordionItemHeading {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 
@@ -1173,6 +1178,7 @@ html, body {
     margin: 0 auto;
   }
 }
+
 .swiper-box {
   max-width: 335px;
   margin: 0 auto;
